@@ -1,0 +1,25 @@
+run
+console
+run
+reload
+run
+reload
+run
+exit
+compile
+run
+clean compile
+clean'
+clean
+package
+name
+show name
+inspect name
+fullClassPAth
+fullClassPath
+fullClasspath
+inspect fullClasspath
+inpect name
+inspect name
+plugins
+show sources
