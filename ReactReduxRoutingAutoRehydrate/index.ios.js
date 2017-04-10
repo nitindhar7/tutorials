@@ -12,7 +12,7 @@ import {
   AsyncStorage,
   AppState
 } from 'react-native';
-import { Provider } from 'react-redux'
+import { Provider, connect } from 'react-redux'
 import { compose, applyMiddleware, createStore } from 'redux'
 import {Actions, Scene, Router} from 'react-native-router-flux';
 import {persistStore, autoRehydrate} from 'redux-persist'
@@ -32,6 +32,8 @@ const scenes = Actions.create(
   </Scene>
 );
 
+const ReduxedRouter = connect()(Router)
+
 export default class ReactReduxRoutingAutoRehydrate extends Component {
   componentWillMount() {
     AppState.addEventListener('change', (currentAppState) => {
@@ -40,9 +42,10 @@ export default class ReactReduxRoutingAutoRehydrate extends Component {
   }
 
   render() {
+    console.log(store.getState())
     return (
       <Provider store={store}>
-        <Router scenes={scenes}/>
+        <ReduxedRouter scenes={scenes} />
       </Provider>
     );
   }

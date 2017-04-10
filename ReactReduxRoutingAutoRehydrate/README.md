@@ -4,8 +4,8 @@
 ✅ - navigate to and from the 2 different screens
 ✅ - load initial state on first app start
 ✅ - redux store based flow
-- Persist state to storage
-- pull out state from the storage on app restart
+✅ - Persist state to storage
+✅ - pull out state from the storage on app restart
 
 Flow:
 
